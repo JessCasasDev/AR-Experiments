@@ -28,4 +28,4 @@ AR-Experiments
 #### [JSArtoolkit5-threejs_from_scratch](jsartoolkit5/examples/threejs_from_scratch.html)
 
 # WEBXR
-#### [WEBXR-babylonjs](webxr/mirroring.html)
+#### [WEBXR-mirroring](webxr/mirroring.html)
