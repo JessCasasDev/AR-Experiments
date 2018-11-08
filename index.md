@@ -36,4 +36,4 @@ AR-Experiments
 
 # AR.js
 
-#### [example1](ArJa/example1.html)
+#### [example1](ArJs/example1.html)
