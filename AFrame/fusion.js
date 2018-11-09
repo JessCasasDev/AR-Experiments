@@ -596,61 +596,61 @@ window.onload = function () {
 
     var camera = document.getElementById('camera');
 
-    camera.addEventListener('componentchanged', function (evt) {
-        switch (evt.detail.name) {
-            case 'rotation':
-                var newData = evt.target.getAttribute('rotation');
-                console.log('camera rotation changed', newData);
-                var
-                    compassRotation = camera.components['compass-rotation'],
-                    lookControls = camera.components['look-controls']
-                    ;
-                camera_angle.innerText = newData.y;
-                if (lookControls) {
-                    yaw_angle.innerText = THREE.Math.radToDeg(lookControls.yawObject.rotation.y);
-                }
-                if (compassRotation) {
-                    compass_heading.innerText = compassRotation.heading;
-                }
-                break;
-            case 'position':
-                var newData = evt.target.getAttribute('position');
-                console.log('camera position changed', newData);
-                var
-                    gpsPosition = camera.components['gps-position']
-                    ;
-                camera_p_x.innerText = newData.x;
-                camera_p_z.innerText = newData.z;
-                if (gpsPosition) {
-                    if (gpsPosition.crd) {
-                        crd_longitude.innerText = gpsPosition.crd.longitude;
-                        crd_latitude.innerText = gpsPosition.crd.latitude;
+    // camera.addEventListener('componentchanged', function (evt) {
+    //     switch (evt.detail.name) {
+    //         case 'rotation':
+    //             var newData = evt.target.getAttribute('rotation');
+    //             console.log('camera rotation changed', newData);
+    //             var
+    //                 compassRotation = camera.components['compass-rotation'],
+    //                 lookControls = camera.components['look-controls']
+    //                 ;
+    //             camera_angle.innerText = newData.y;
+    //             if (lookControls) {
+    //                 yaw_angle.innerText = THREE.Math.radToDeg(lookControls.yawObject.rotation.y);
+    //             }
+    //             if (compassRotation) {
+    //                 compass_heading.innerText = compassRotation.heading;
+    //             }
+    //             break;
+    //         case 'position':
+    //             var newData = evt.target.getAttribute('position');
+    //             console.log('camera position changed', newData);
+    //             var
+    //                 gpsPosition = camera.components['gps-position']
+    //                 ;
+    //             camera_p_x.innerText = newData.x;
+    //             camera_p_z.innerText = newData.z;
+    //             if (gpsPosition) {
+    //                 if (gpsPosition.crd) {
+    //                     crd_longitude.innerText = gpsPosition.crd.longitude;
+    //                     crd_latitude.innerText = gpsPosition.crd.latitude;
 
-                        var hash = Geohash.encode(gpsPosition.crd.latitude, gpsPosition.crd.longitude, 7);
-                        //geohash_7chars.innerText = hash;
+    //                     var hash = Geohash.encode(gpsPosition.crd.latitude, gpsPosition.crd.longitude, 7);
+    //                     //geohash_7chars.innerText = hash;
 
-                        // if (typeof (hash_fences[hash]) == 'undefined') {
-                        // 	hash_fences[hash] = null;
-                        // 	document.head.appendChild(ce('script', {
-                        // 		src: 'https://yaglov.ru/cadastre/hash.php?hash=' + hash + '&callback=load_hash'
-                        // 	}));
-                        // }
-                        var olat = 0.0006;
-                        var olng = 0.0006;
-                        // for (var tlat = gpsPosition.crd.latitude - olat * 2; tlat <= gpsPosition.crd.latitude + olat * 2; tlat += olat)
-                        // 	for (var tlng = gpsPosition.crd.longitude - olng * 2; tlng <= gpsPosition.crd.longitude + olng * 2; tlng += olng)
-                        // 		load_ground_tile(tlat, tlng, 18, 'y');
+    //                     // if (typeof (hash_fences[hash]) == 'undefined') {
+    //                     // 	hash_fences[hash] = null;
+    //                     // 	document.head.appendChild(ce('script', {
+    //                     // 		src: 'https://yaglov.ru/cadastre/hash.php?hash=' + hash + '&callback=load_hash'
+    //                     // 	}));
+    //                     // }
+    //                     var olat = 0.0006;
+    //                     var olng = 0.0006;
+    //                     // for (var tlat = gpsPosition.crd.latitude - olat * 2; tlat <= gpsPosition.crd.latitude + olat * 2; tlat += olat)
+    //                     // 	for (var tlng = gpsPosition.crd.longitude - olng * 2; tlng <= gpsPosition.crd.longitude + olng * 2; tlng += olng)
+    //                     // 		load_ground_tile(tlat, tlng, 18, 'y');
 
-                    }
-                    if (gpsPosition.zeroCrd) {
-                        zero_crd_longitude.innerText = gpsPosition.zeroCrd.longitude;
-                        zero_crd_latitude.innerText = gpsPosition.zeroCrd.latitude;
-                    }
-                }
+    //                 }
+    //                 if (gpsPosition.zeroCrd) {
+    //                     zero_crd_longitude.innerText = gpsPosition.zeroCrd.longitude;
+    //                     zero_crd_latitude.innerText = gpsPosition.zeroCrd.latitude;
+    //                 }
+    //             }
 
-                break;
-        }
-    });
+    //             break;
+    //     }
+    // });
 
 
 };
