@@ -36,6 +36,7 @@ AR-Experiments
 
 #### [MArkerless camera](AFrame/ArJs-AFrame-Phills-sphere.html)
 #### [MArkerless map](AFrame/GMAP-ground.html)
+#### [a-frame-dae-gmap-ground](AFrame/a-frame-dae-gmap-ground.html)
 
 # AR.js
 
