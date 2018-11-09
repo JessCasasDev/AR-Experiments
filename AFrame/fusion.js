@@ -627,7 +627,7 @@ window.onload = function () {
                         crd_latitude.innerText = gpsPosition.crd.latitude;
 
                         var hash = Geohash.encode(gpsPosition.crd.latitude, gpsPosition.crd.longitude, 7);
-                        geohash_7chars.innerText = hash;
+                        //geohash_7chars.innerText = hash;
 
                         // if (typeof (hash_fences[hash]) == 'undefined') {
                         // 	hash_fences[hash] = null;
