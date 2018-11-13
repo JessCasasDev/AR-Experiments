@@ -6,6 +6,7 @@ AR-Experiments
 #### [AWE-stereo_ar](awe/examples/stereo_ar/index.html)
 
 #### [Example 1](awe/awe_test1.html)
+#### [PointHelper](awe/test_camera/index.html)
 
 # THREE.JS
 #### [THREE.JS-BASIC](threeJS/index.html)
