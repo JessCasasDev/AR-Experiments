@@ -69,7 +69,7 @@ var app = {
                 // load js files based on capability detection then setup the scene if successful
                 awe.util.require([
                     {
-                        capabilities: ['webgl'], //todo integrate reqs for geolocation, compass/device-orientation
+                        capabilities: ['webgl', 'gum'], //todo integrate reqs for geolocation, compass/device-orientation
                         files: [
                             ['libs/awe.js/js/awe-standard-dependencies.js' + d, 'libs/awe.js/js/awe-standard.js'], // core dependencies for this app 
                             ['libs/awe.js/js/plugins_/StereoEffect.js', 'libs/awe.js/js/plugins_/VREffect.js'], // dependencies for render effects
