@@ -77,8 +77,8 @@ var app = {
                             'libs/awe.js/js/plugins_/awe-standard-object_clicked_or_focused.js' + d, // object click/tap handling plugin
                             'libs/awe.js/js/plugins_/awe.gyro.js', // basic gyro handling
                             'libs/awe.js/js/plugins_/awe.mouse.js' + d, // basic mouse handling
-                            'js/ecef.js',
-                            'js/AwePoiPositionHelper.js'
+                            'ecef.js',
+                            'AwePoiPositionHelper.js'
                         ],
                         success: function (y) {
 
@@ -101,8 +101,8 @@ var app = {
                                 mouse_plugin.enable();
                             }
 
-                            awe.settings.update( {data:{value: 'ar'}, 
-                            where:{id: 'view_mode'}},);
+                            /* awe.settings.update( {data:{value: 'ar'}, 
+                            where:{id: 'view_mode'}},); */
                             //awe.settings.update({data: {value: 'stereo'},where: {id: 'view_count'}});
                             var render_effects_plugin = awe.plugins.view('render_effects');
                             if (render_effects_plugin) {
@@ -153,7 +153,7 @@ var app = {
                                 poiLocations,
                                 {
                                     povHeight: 20,
-                                   // showGrid: true,
+                                    showGrid: true,
                                     linkAweRefFrameToCompassHeading: true
                                 });
 
