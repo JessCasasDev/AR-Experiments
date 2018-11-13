@@ -134,7 +134,7 @@ var AwePoiPositionHelper = (function () {
         switch(_state) {
             case States.STOPPED:
                 _state = States.STARTING;
-                _startHeadingWatch();
+          //      _startHeadingWatch();
                 _startGeolocationWatch();            
             case States.STARTING:
                 //wait for initial heading & geolocation data to arrive
