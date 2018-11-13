@@ -77,8 +77,8 @@ var app = {
                             'libs/awe.js/js/plugins_/awe-standard-object_clicked_or_focused.js' + d, // object click/tap handling plugin
                             'libs/awe.js/js/plugins_/awe.gyro.js', // basic gyro handling
                             'libs/awe.js/js/plugins_/awe.mouse.js' + d, // basic mouse handling
-                            'ecef.js',
-                            'AwePoiPositionHelper.js'
+                            'js/ecef.js',
+                            'js/AwePoiPositionHelper.js'
                         ],
                         success: function (y) {
 
