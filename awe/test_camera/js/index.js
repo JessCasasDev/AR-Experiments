@@ -101,8 +101,8 @@ var app = {
                                 mouse_plugin.enable();
                             }
 
-                           /*  awe.settings.update( {data:{value: 'ar'}, 
-                            where:{id: 'view_mode'}},); */
+                            awe.settings.update( {data:{value: 'ar'}, 
+                            where:{id: 'view_mode'}},);
                             //awe.settings.update({data: {value: 'stereo'},where: {id: 'view_count'}});
                             var render_effects_plugin = awe.plugins.view('render_effects');
                             if (render_effects_plugin) {
