@@ -142,7 +142,7 @@ var AwePoiPositionHelper = (function () {
                     if (AwePoiPositionHelper._requiredStartDataReceived()) {
                         AwePoiPositionHelper._continueStart();
                     } else {
-                        AwePoiPositionHelper.start();
+                        AwePoiPositionHelper._continueStart();
                     }
                 }, 200);
                 break;
