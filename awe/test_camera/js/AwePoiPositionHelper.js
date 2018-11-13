@@ -230,7 +230,7 @@ var AwePoiPositionHelper = (function () {
 
     var _requiredStartDataReceived = function() {
         return( 
-            _cordovaPluginsReady &&
+           // _cordovaPluginsReady &&
             _state == States.STARTING && 
             _hasHeading() && 
             _hasGeolocation());
